@@ -57,7 +57,6 @@ export default function RootLayout({
           <div className="mb-8">
             <AnimatedLogo size={40} />
           </div>
-          <Navbar />
           {children}
           <Footer />
           <Analytics />
