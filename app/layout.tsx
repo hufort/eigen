@@ -8,7 +8,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
-import { cx } from './utils'
+import { cn } from './utils'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(
+      className={cn(
         'text-neutral-800 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-900',
         GeistSans.variable,
         GeistMono.variable
