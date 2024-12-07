@@ -1,4 +1,6 @@
-interface LogoProps {
+import { type SVGProps } from 'react'
+
+interface LogoProps extends SVGProps<SVGSVGElement> {
   className?: string
   size?: number
   fill?: string
@@ -8,8 +10,9 @@ export function Logo({
   className = '',
   size = 48,
   fill = 'currentColor',
+  ...svgProps
 }: LogoProps) {
-  const aspectRatio = 891 / 631 // Original SVG dimensions
+  const aspectRatio = 891 / 631
   const width = size * aspectRatio
   const height = size
 
@@ -23,6 +26,7 @@ export function Logo({
       className={className}
       role="img"
       aria-label="Hugh Forte Logo"
+      {...svgProps}
     >
       <title>Hugh Forte Logo</title>
       <desc>An abstract monogram of HF</desc>
