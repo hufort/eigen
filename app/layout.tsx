@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
+import { Logo } from './components/logo'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
@@ -54,6 +55,12 @@ export default function RootLayout({
     >
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+          <div className="mb-8">
+            <Logo
+              size={40}
+              className="text-neutral-800 dark:text-neutral-200 hover:scale-110 hover:-rotate-90 transition-all duration-300"
+            />
+          </div>
           <Navbar />
           {children}
           <Footer />
