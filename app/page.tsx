@@ -1,15 +1,16 @@
-import { BlogPosts } from 'app/components/posts'
 import Link from 'next/link'
 
 export default function Page() {
   return (
     <section>
-      <h1 className="text-2xl font-semibold tracking-tighter">Hey hey.</h1>
-      <div className="prose">
-        <p className="text-lg font-medium">
-          I’m Hugh and I love making things – especially software.{' '}
+      <header>
+        <h1 className="text-2xl font-semibold tracking-tighter">Hey hey.</h1>
+      </header>
+      <article className="prose">
+        <p className="text-lg font-semibold">
+          I’m Hugh and I love making things – especially software.
         </p>
-        <p className="text-sm">
+        <p>
           I’m a front end engineer at{' '}
           <Link
             href="https://planningcenter.com"
@@ -18,9 +19,9 @@ export default function Page() {
           >
             Planning Center
           </Link>
-          , where I’m currently working on our cross-app chat feature.{' '}
+          , where I’m currently working on our cross-app chat feature.
         </p>
-        <p className="text-sm">
+        <p>
           I wear a more full-stack-looking hat when I work on Sprouted Kitchen{' '}
           <Link
             href="https://sproutedkitchen.cc"
@@ -39,7 +40,7 @@ export default function Page() {
           </Link>
           ’s husband. Lucky guy.) and I make the pictures over there, as well.{' '}
         </p>
-        <p className="text-xs leading-relaxed">
+        <p className="text-sm">
           In another branch of the multiverse I’m still working as a
           photographer, but the only artifact left in this causal narrative is{' '}
           <Link
@@ -51,10 +52,7 @@ export default function Page() {
           </Link>
           's old instagram account.
         </p>
-      </div>
-      {/* <div className="my-8">
-        <BlogPosts />
-      </div> */}
+      </article>
     </section>
   )
 }
