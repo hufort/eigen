@@ -8,7 +8,7 @@ export default function Page() {
       </header>
       <article className="prose">
         <p className="text-lg font-semibold">
-          I’m Hugh and I love making things – especially software.
+          My name's Hugh and I love making things – especially software.
         </p>
         <p>
           I’m a front end engineer at{' '}
@@ -22,7 +22,7 @@ export default function Page() {
           , where I’m currently working on our cross-app chat feature.
         </p>
         <p>
-          I wear a more full-stack-looking hat when I work on Sprouted Kitchen{' '}
+          I range across the full stack when working on Sprouted Kitchen{' '}
           <Link
             href="https://sproutedkitchen.cc"
             target="_blank"
@@ -42,7 +42,7 @@ export default function Page() {
         </p>
         <p className="text-sm">
           In another branch of the multiverse I’m still working as a
-          photographer, but the only artifact left in this causal narrative is{' '}
+          photographer, but the only artifact left in this timeline is{' '}
           <Link
             href="https://instagram.com/hufort"
             target="_blank"
