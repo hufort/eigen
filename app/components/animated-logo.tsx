@@ -14,7 +14,8 @@ export function AnimatedLogo({ size = 40 }: { size?: number }) {
       className={cn(
         'inline-block p-1 rounded-full',
         'transition-colors cursor-pointer',
-        'block w-fit'
+        'block w-fit',
+        'relative -left-1'
       )}
       onMouseEnter={() => setIsTransformed(!isTransformed)}
     >
