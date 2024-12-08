@@ -4,12 +4,11 @@ export default function Page() {
   return (
     <section>
       <header>
-        <h1 className="text-2xl font-semibold tracking-tighter">Hey hey.</h1>
+        <h1 className="text-2xl font-semibold tracking-tighter mb-8">
+          Hey there, I’m Hugh.
+        </h1>
       </header>
       <article className="prose">
-        <p className="text-lg font-semibold">
-          My name's Hugh and I love making things – especially software.
-        </p>
         <p>
           I’m a front end engineer at{' '}
           <Link
@@ -22,13 +21,13 @@ export default function Page() {
           , where I’m currently working on our cross-app chat feature.
         </p>
         <p>
-          I range across the full stack when working on Sprouted Kitchen{' '}
+          I range across the full stack while building{' '}
           <Link
             href="https://sproutedkitchen.cc"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Cooking Club
+            Sprouted Kitchen Cooking Club
           </Link>{' '}
           (I happen to be{' '}
           <Link
@@ -42,7 +41,8 @@ export default function Page() {
         </p>
         <p className="text-sm">
           In another branch of the multiverse I’m still working as a
-          photographer, but the only artifact left in this timeline is{' '}
+          photographer, but the only artifact of that story left in this
+          timeline is{' '}
           <Link
             href="https://instagram.com/hufort"
             target="_blank"
