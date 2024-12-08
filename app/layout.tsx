@@ -47,7 +47,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        'text-stone-700 bg-stone-300 dark:text-neutral-300 dark:bg-sky-400/05',
+        'text-stone-700 bg-stone-200 dark:text-neutral-300 dark:bg-sky-400/05',
         GeistSans.variable,
         GeistMono.variable
       )}
