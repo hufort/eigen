@@ -13,10 +13,36 @@ import { cn } from './utils'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'HF',
-    template: '%s | HF',
+    default: 'Hugh Forte',
+    template: '%s | Hugh Forte',
   },
   description: 'Explore possibility. Embrace simplicity.',
+  icons: {
+    icon: [
+      { url: '/favicon-light.ico', media: '(prefers-color-scheme: light)' },
+      { url: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
+      { url: '/favicon-light.svg', media: '(prefers-color-scheme: light)' },
+      { url: '/favicon-dark.svg', media: '(prefers-color-scheme: dark)' },
+      { url: '/favicon-light.ico' }, // fallback for browsers that don't support media queries
+    ],
+    apple: [
+      {
+        url: '/apple-touch-icon-light.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/apple-touch-icon-dark.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      { url: '/apple-touch-icon-light.png' }, // fallback
+    ],
+    other: [
+      {
+        rel: 'manifest',
+        url: '/manifest.json',
+      },
+    ],
+  },
   openGraph: {
     title: 'Hugh Forte',
     description: 'Explore possibility. Embrace simplicity.',
