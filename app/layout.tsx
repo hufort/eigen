@@ -79,21 +79,25 @@ export default function RootLayout({
       )}
     >
       <body className="antialiased h-full">
-        <main className="flex-auto min-w-0 flex flex-col h-full w-full">
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full md:grid-rows-[1fr_3fr]">
-            <div className="mb-8 px-12 py-16 md:col-start-1">
+        <main className="grid grid-rows-[auto_1fr] md:grid-rows-[1fr_3fr] h-full w-full">
+          <div className="grid grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full">
+            <div className="px-12 py-16 md:col-start-1">
               <AnimatedLogo size={40} />
             </div>
-            <div className="border-l border-dashed border-stone-300 dark:border-sky-300/10 px-12 py-16 md:col-start-2">
+            <div className="md:border-l border-dashed border-stone-300 dark:border-sky-300/10 px-12 py-16 md:col-start-2">
               <Navbar />
             </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full grid-flow-dense">
             <div className="border-l border-t border-dashed border-stone-300 dark:border-sky-300/10 px-12 py-16 md:col-start-2">
               {children}
             </div>
-            <div className="border-t border-dashed border-stone-300 dark:border-sky-300/10 px-12 py-16 flex items-end md:col-start-1 md:row-start-2">
+            <div className="border-t border-dashed border-stone-300 dark:border-sky-300/10 px-12 py-16 flex items-end md:col-start-1">
               <Footer />
             </div>
           </div>
+
           <Analytics />
           <SpeedInsights />
         </main>
