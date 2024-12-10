@@ -73,18 +73,27 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        'text-stone-700 bg-stone-200 dark:text-neutral-300 dark:bg-sky-400/05',
+        'text-stone-700 bg-stone-200 dark:text-neutral-300 dark:bg-sky-400/05 h-screen',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-12 flex flex-col px-2 md:px-0">
-          <div className="mb-8">
-            <AnimatedLogo size={40} />
+      <body className="antialiased h-full">
+        <main className="flex-auto min-w-0 flex flex-col h-full w-full">
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full md:grid-rows-[1fr_3fr]">
+            <div className="mb-8 px-12 py-16 md:col-start-1">
+              <AnimatedLogo size={40} />
+            </div>
+            <div className="border-l border-dashed border-stone-300 dark:border-sky-300/10 px-12 py-16 md:col-start-2">
+              <Navbar />
+            </div>
+            <div className="border-l border-t border-dashed border-stone-300 dark:border-sky-300/10 px-12 py-16 md:col-start-2">
+              {children}
+            </div>
+            <div className="border-t border-dashed border-stone-300 dark:border-sky-300/10 px-12 py-16 flex items-end md:col-start-1 md:row-start-2">
+              <Footer />
+            </div>
           </div>
-          {children}
-          <Footer />
           <Analytics />
           <SpeedInsights />
         </main>
