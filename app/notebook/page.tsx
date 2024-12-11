@@ -2,7 +2,7 @@ import { NotebookNotes } from 'app/components/notes'
 
 export const metadata = {
   title: 'Notebook',
-  description: 'Read my notebook.',
+  description: 'A collection of thoughts and things I find interesting.',
 }
 
 export default function Page() {
