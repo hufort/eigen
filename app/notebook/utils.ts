@@ -40,11 +40,15 @@ function getMDXData(dir: string) {
   return mdxFiles.map((file) => {
     let { metadata, content } = readMDXFile(path.join(dir, file))
     let slug = path.basename(file, path.extname(file))
+    // Extract the note number from the filename
+    let noteNumber = slug.match(/^(\d{4})-/)?.[1] || '0000'
+    slug = slug.replace(/^\d{4}-/, '') // Remove the number prefix from the slug
 
     return {
       metadata,
       slug,
       content,
+      noteNumber,
     }
   })
 }
