@@ -75,13 +75,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        'text-stone-700 bg-stone-200 dark:text-neutral-300 dark:bg-sky-400/05 h-screen',
+        'text-stone-700 bg-stone-200 dark:text-neutral-300 dark:bg-sky-400/05',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased h-full">
-        <main className="grid grid-rows-[auto_1fr] md:grid-rows-[1fr_3fr] h-full w-full">
+      <body className="antialiased h-screen">
+        <main className="grid grid-rows-[auto_1fr] md:grid-rows-[1fr_4fr] h-full w-full min-h-0">
+          {/* Top section */}
           <div className="grid grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full">
             <div className={cn(SECTION_PADDING, 'md:col-start-1')}>
               <AnimatedLogo size={40} />
@@ -96,11 +97,12 @@ export default function RootLayout({
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full grid-flow-dense">
+          {/* bottom section */}
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full grid-flow-dense min-h-0">
             <div
               className={cn(
                 SECTION_PADDING,
-                'border-l border-t border-dashed border-stone-300 dark:border-sky-300/10  md:col-start-2'
+                'border-l border-t border-dashed border-stone-300 dark:border-sky-300/10 md:col-start-2 overflow-y-auto'
               )}
             >
               {children}
