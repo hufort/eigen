@@ -102,7 +102,7 @@ export default function RootLayout({
             <div
               className={cn(
                 SECTION_PADDING,
-                'border-l border-t border-dashed border-stone-300 dark:border-sky-300/10 md:col-start-2 overflow-y-auto flex-1'
+                'md:border-l border-t border-dashed border-stone-300 dark:border-sky-300/10 md:col-start-2 overflow-y-auto flex-1'
               )}
             >
               {children}
