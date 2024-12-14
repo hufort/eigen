@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { Logo } from './logo'
 import { cn } from '../utils'
@@ -10,6 +10,12 @@ const isTouchDevice = typeof window !== 'undefined' && 'ontouchstart' in window
 export function AnimatedLogo({ size = 40 }: { size?: number }) {
   const [isTransformed, setIsTransformed] = useState(false)
   const timeoutRef = useRef<NodeJS.Timeout>()
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    }
+  }, [])
 
   return (
     <Link
