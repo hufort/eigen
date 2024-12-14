@@ -7,6 +7,7 @@ import { cn } from '../utils'
 
 export function AnimatedLogo({ size = 40 }: { size?: number }) {
   const [isTransformed, setIsTransformed] = useState(false)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
 
   return (
     <Link
@@ -17,7 +18,14 @@ export function AnimatedLogo({ size = 40 }: { size?: number }) {
         'block w-fit',
         'relative -left-1'
       )}
-      onMouseEnter={() => setIsTransformed(!isTransformed)}
+      onMouseEnter={() => !isTouchDevice && setIsTransformed(!isTransformed)}
+      onTouchStart={() => {
+        setIsTouchDevice(true)
+        setIsTransformed(true)
+        setTimeout(() => {
+          setIsTransformed(false)
+        }, 2000)
+      }}
     >
       <Logo
         size={size}
