@@ -64,6 +64,8 @@ export const metadata: Metadata = {
   },
 }
 
+const SECTION_PADDING = 'p-8 sm:py-10 lg:p-12'
+
 export default function RootLayout({
   children,
 }: {
@@ -78,13 +80,43 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-12 flex flex-col px-2 md:px-0">
-          <div className="mb-8">
-            <AnimatedLogo size={40} />
+      <body className="antialiased md:h-screen h-min-screen">
+        <main className="grid grid-rows-[auto_1fr] md:grid-rows-[1fr_4fr] h-full w-full min-h-screen md:min-h-0">
+          {/* Top section */}
+          <div className="grid grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full">
+            <div className={cn(SECTION_PADDING, 'md:col-start-1')}>
+              <AnimatedLogo size={40} />
+            </div>
+            <div
+              className={cn(
+                SECTION_PADDING,
+                'md:border-l border-dashed border-stone-300 dark:border-sky-300/10 md:col-start-2'
+              )}
+            >
+              <Navbar />
+            </div>
           </div>
-          {children}
-          <Footer />
+
+          {/* bottom section */}
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full grid-flow-dense min-h-0 grid-rows-[1fr_auto]">
+            <div
+              className={cn(
+                SECTION_PADDING,
+                'md:border-l border-t border-dashed border-stone-300 dark:border-sky-300/10 md:col-start-2 overflow-y-auto flex-1'
+              )}
+            >
+              {children}
+            </div>
+            <div
+              className={cn(
+                SECTION_PADDING,
+                'border-t border-dashed border-stone-300 dark:border-sky-300/10 flex items-end md:col-start-1'
+              )}
+            >
+              <Footer />
+            </div>
+          </div>
+
           <Analytics />
           <SpeedInsights />
         </main>
