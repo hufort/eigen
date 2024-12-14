@@ -34,7 +34,7 @@ html {
 }
 
 .prose .anchor {
-  @apply absolute invisible no-underline;
+  @apply invisible absolute no-underline;
 
   margin-left: -1em;
   padding-right: 0.5em;
@@ -48,7 +48,7 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all decoration-stone-400 dark:decoration-stone-500 underline-offset-2 decoration-[0.1em];
+  @apply underline decoration-stone-400 decoration-[0.1em] underline-offset-2 transition-all dark:decoration-stone-500;
 }
 
 .prose .anchor:after {
@@ -61,11 +61,11 @@ html {
 }
 
 .prose pre {
-  @apply bg-stone-200 dark:bg-zinc-400/05 rounded-lg overflow-x-auto border border-stone-300 dark:border-zinc-400/0.5 py-2 px-3 text-sm;
+  @apply overflow-x-auto rounded-lg border border-stone-300 bg-stone-200 py-2 px-3 text-sm dark:border-zinc-400/0.5 dark:bg-zinc-400/05;
 }
 
 .prose code {
-  @apply px-1 py-0.5 rounded-lg;
+  @apply rounded-lg py-0.5 px-1;
 }
 
 .prose pre code {
@@ -88,19 +88,19 @@ html {
 }
 
 .prose h1 {
-  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+  @apply mt-6 mb-2 text-4xl font-medium tracking-tight;
 }
 
 .prose h2 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply mt-6 mb-2 text-xl font-medium tracking-tight;
 }
 
 .prose h3 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply mt-6 mb-2 text-xl font-medium tracking-tight;
 }
 
 .prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+  @apply mt-6 mb-2 text-lg font-medium tracking-tight;
 }
 
 .prose strong {

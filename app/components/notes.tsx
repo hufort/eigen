@@ -18,14 +18,14 @@ export function NotebookNotes() {
         .map((note, idx) => (
           <Link
             key={note.slug}
-            className="flex flex-col space-y-1 mb-4"
+            className="mb-4 flex flex-col space-y-1"
             href={`/notebook/${note.slug}`}
           >
-            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2 items-baseline">
-              <p className="text-zinc-600 dark:text-zinc-400 w-10 font-mono text-sm">
+            <div className="flex w-full flex-col items-baseline space-x-0 md:flex-row md:space-x-2">
+              <p className="w-10 font-mono text-sm text-zinc-600 dark:text-zinc-400">
                 {note.noteNumber}
               </p>
-              <p className="text-zinc-900 dark:text-zinc-200 tracking-tight">
+              <p className="tracking-tight text-zinc-900 dark:text-zinc-200">
                 {note.metadata.title}
               </p>
             </div>
