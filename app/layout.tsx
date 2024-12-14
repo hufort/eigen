@@ -112,7 +112,7 @@ export default function RootLayout({
                 'flex-1 overflow-y-auto border-t border-dashed border-stone-300 md:col-start-2 md:border-l dark:border-zinc-300/10'
               )}
             >
-              <div className="max-w-4xl">{children}</div>
+              <div className="max-w-2xl">{children}</div>
             </div>
             <div
               className={cn(
