@@ -82,10 +82,10 @@ export default function Note({ params }) {
           }),
         }}
       />
-      <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
+      <h1 className="title max-w-[650px] text-2xl font-medium tracking-tighter">
         {note.metadata.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]"></div>
+      <div className="mt-2 mb-8 flex max-w-[650px] items-center justify-between text-sm"></div>
       <article className="prose prose-stone dark:prose-invert">
         <CustomMDX source={note.content} />
       </article>

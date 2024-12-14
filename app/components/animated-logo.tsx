@@ -12,8 +12,8 @@ export function AnimatedLogo({ size = 40 }: { size?: number }) {
     <Link
       href="/"
       className={cn(
-        'inline-block p-1 rounded-full',
-        'transition-colors cursor-pointer',
+        'inline-block rounded-full p-1',
+        'cursor-pointer transition-colors',
         'block w-fit',
         'relative -left-1'
       )}
@@ -24,7 +24,7 @@ export function AnimatedLogo({ size = 40 }: { size?: number }) {
         className={cn(
           'text-current',
           'transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]',
-          isTransformed && 'scale-90 -rotate-90 -translate-x-3'
+          isTransformed && '-translate-x-3 scale-90 -rotate-90'
         )}
       />
     </Link>

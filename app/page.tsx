@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <section>
       <header>
-        <h1 className="text-2xl font-semibold tracking-tighter mb-8">
+        <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
           Hey there, I’m Hugh.
         </h1>
       </header>

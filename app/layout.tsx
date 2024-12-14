@@ -82,22 +82,22 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        'text-stone-700 bg-stone-200 dark:text-zinc-300 dark:bg-zinc-800',
+        'bg-stone-200 text-stone-700 dark:bg-zinc-800 dark:text-zinc-300',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased md:h-[100dvh] h-min-[100dvh]">
-        <main className="grid grid-rows-[auto_1fr] md:grid-rows-[1fr_4fr] h-full w-full min-h-[100dvh] md:min-h-0">
+      <body className="h-min-[100dvh] antialiased md:h-[100dvh]">
+        <main className="grid h-full min-h-[100dvh] w-full grid-rows-[auto_1fr] md:min-h-0 md:grid-rows-[1fr_4fr]">
           {/* Top section */}
-          <div className="grid grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full">
+          <div className="grid h-full grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr]">
             <div className={cn(SECTION_PADDING, 'md:col-start-1')}>
               <AnimatedLogo size={40} />
             </div>
             <div
               className={cn(
                 SECTION_PADDING,
-                'md:border-l border-dashed border-stone-300 dark:border-zinc-300/10 md:col-start-2'
+                'border-dashed border-stone-300 md:col-start-2 md:border-l dark:border-zinc-300/10'
               )}
             >
               <Navbar />
@@ -105,11 +105,11 @@ export default function RootLayout({
           </div>
 
           {/* bottom section */}
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full grid-flow-dense min-h-0 grid-rows-[1fr_auto]">
+          <div className="grid h-full min-h-0 grid-flow-dense grid-cols-1 grid-rows-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr]">
             <div
               className={cn(
                 SECTION_PADDING,
-                'md:border-l border-t border-dashed border-stone-300 dark:border-zinc-300/10 md:col-start-2 overflow-y-auto flex-1'
+                'flex-1 overflow-y-auto border-t border-dashed border-stone-300 md:col-start-2 md:border-l dark:border-zinc-300/10'
               )}
             >
               {children}
@@ -117,7 +117,7 @@ export default function RootLayout({
             <div
               className={cn(
                 SECTION_PADDING,
-                'border-t border-dashed border-stone-300 dark:border-zinc-300/10 flex items-end md:col-start-1'
+                'flex items-end border-t border-dashed border-stone-300 md:col-start-1 dark:border-zinc-300/10'
               )}
             >
               <Footer />
