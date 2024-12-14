@@ -12,8 +12,8 @@ import { cn } from './utils'
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#F5F5F4' }, // stone-200
-    { media: '(prefers-color-scheme: dark)', color: '#0C4A6E' }, // sky-900
+    { media: '(prefers-color-scheme: light)', color: '#D6D3D1' }, // stone-300
+    { media: '(prefers-color-scheme: dark)', color: '#082F49' }, // sky-950
   ],
 }
 
