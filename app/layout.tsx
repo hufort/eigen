@@ -1,5 +1,5 @@
 import './global.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
@@ -9,6 +9,13 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 import { cn } from './utils'
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F5F5F4' }, // stone-200
+    { media: '(prefers-color-scheme: dark)', color: '#0C4A6E' }, // sky-900
+  ],
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
