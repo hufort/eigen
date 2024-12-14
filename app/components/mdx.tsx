@@ -88,7 +88,7 @@ function createHeading(level) {
 
 function Blockquote({ children }) {
   return (
-    <blockquote className="my-4 border-l-4 border-stone-300 pl-4 dark:border-neutral-700">
+    <blockquote className="my-4 border-l-4 border-stone-300 pl-4 dark:border-zinc-700">
       {children}
     </blockquote>
   )

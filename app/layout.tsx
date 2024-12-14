@@ -13,7 +13,7 @@ import { cn } from './utils'
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#D6D3D1' }, // stone-300
-    { media: '(prefers-color-scheme: dark)', color: '#082F49' }, // sky-950
+    { media: '(prefers-color-scheme: dark)', color: '#09090B' }, // zinc-950
   ],
 }
 
@@ -82,7 +82,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        'text-stone-700 bg-stone-200 dark:text-neutral-300 dark:bg-sky-400/05',
+        'text-stone-700 bg-stone-200 dark:text-zinc-300 dark:bg-zinc-800',
         GeistSans.variable,
         GeistMono.variable
       )}
@@ -97,7 +97,7 @@ export default function RootLayout({
             <div
               className={cn(
                 SECTION_PADDING,
-                'md:border-l border-dashed border-stone-300 dark:border-sky-300/10 md:col-start-2'
+                'md:border-l border-dashed border-stone-300 dark:border-zinc-300/10 md:col-start-2'
               )}
             >
               <Navbar />
@@ -109,7 +109,7 @@ export default function RootLayout({
             <div
               className={cn(
                 SECTION_PADDING,
-                'md:border-l border-t border-dashed border-stone-300 dark:border-sky-300/10 md:col-start-2 overflow-y-auto flex-1'
+                'md:border-l border-t border-dashed border-stone-300 dark:border-zinc-300/10 md:col-start-2 overflow-y-auto flex-1'
               )}
             >
               {children}
@@ -117,7 +117,7 @@ export default function RootLayout({
             <div
               className={cn(
                 SECTION_PADDING,
-                'border-t border-dashed border-stone-300 dark:border-sky-300/10 flex items-end md:col-start-1'
+                'border-t border-dashed border-stone-300 dark:border-zinc-300/10 flex items-end md:col-start-1'
               )}
             >
               <Footer />
