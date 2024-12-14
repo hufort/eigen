@@ -5,9 +5,10 @@ import Link from 'next/link'
 import { Logo } from './logo'
 import { cn } from '../utils'
 
+const isTouchDevice = typeof window !== 'undefined' && 'ontouchstart' in window
+
 export function AnimatedLogo({ size = 40 }: { size?: number }) {
   const [isTransformed, setIsTransformed] = useState(false)
-  const [isTouchDevice, setIsTouchDevice] = useState(false)
   const timeoutRef = useRef<NodeJS.Timeout>()
 
   return (
@@ -21,15 +22,12 @@ export function AnimatedLogo({ size = 40 }: { size?: number }) {
       )}
       onMouseEnter={() => !isTouchDevice && setIsTransformed(!isTransformed)}
       onTouchStart={() => {
-        setIsTouchDevice(true)
         if (isTransformed) {
           if (timeoutRef.current) clearTimeout(timeoutRef.current)
           setIsTransformed(false)
         } else {
           setIsTransformed(true)
-          timeoutRef.current = setTimeout(() => {
-            setIsTransformed(false)
-          }, 2000)
+          timeoutRef.current = setTimeout(() => setIsTransformed(false), 2000)
         }
       }}
     >
