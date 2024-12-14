@@ -87,8 +87,8 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased md:h-screen h-min-screen">
-        <main className="grid grid-rows-[auto_1fr] md:grid-rows-[1fr_4fr] h-full w-full min-h-screen md:min-h-0">
+      <body className="antialiased md:h-[100dvh] h-min-[100dvh]">
+        <main className="grid grid-rows-[auto_1fr] md:grid-rows-[1fr_4fr] h-full w-full min-h-[100dvh] md:min-h-0">
           {/* Top section */}
           <div className="grid grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full">
             <div className={cn(SECTION_PADDING, 'md:col-start-1')}>
