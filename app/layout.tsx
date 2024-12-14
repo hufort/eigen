@@ -1,5 +1,5 @@
 import './global.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
@@ -9,6 +9,13 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 import { cn } from './utils'
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#D6D3D1' }, // stone-300
+    { media: '(prefers-color-scheme: dark)', color: '#27272A' }, // zinc-800
+  ],
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -75,13 +82,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        'text-stone-700 bg-stone-200 dark:text-neutral-300 dark:bg-sky-400/05',
+        'text-stone-700 bg-stone-200 dark:text-zinc-300 dark:bg-zinc-800',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased md:h-screen h-min-screen">
-        <main className="grid grid-rows-[auto_1fr] md:grid-rows-[1fr_4fr] h-full w-full min-h-screen md:min-h-0">
+      <body className="antialiased md:h-[100dvh] h-min-[100dvh]">
+        <main className="grid grid-rows-[auto_1fr] md:grid-rows-[1fr_4fr] h-full w-full min-h-[100dvh] md:min-h-0">
           {/* Top section */}
           <div className="grid grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr] h-full">
             <div className={cn(SECTION_PADDING, 'md:col-start-1')}>
@@ -90,7 +97,7 @@ export default function RootLayout({
             <div
               className={cn(
                 SECTION_PADDING,
-                'md:border-l border-dashed border-stone-300 dark:border-sky-300/10 md:col-start-2'
+                'md:border-l border-dashed border-stone-300 dark:border-zinc-300/10 md:col-start-2'
               )}
             >
               <Navbar />
@@ -102,7 +109,7 @@ export default function RootLayout({
             <div
               className={cn(
                 SECTION_PADDING,
-                'md:border-l border-t border-dashed border-stone-300 dark:border-sky-300/10 md:col-start-2 overflow-y-auto flex-1'
+                'md:border-l border-t border-dashed border-stone-300 dark:border-zinc-300/10 md:col-start-2 overflow-y-auto flex-1'
               )}
             >
               {children}
@@ -110,7 +117,7 @@ export default function RootLayout({
             <div
               className={cn(
                 SECTION_PADDING,
-                'border-t border-dashed border-stone-300 dark:border-sky-300/10 flex items-end md:col-start-1'
+                'border-t border-dashed border-stone-300 dark:border-zinc-300/10 flex items-end md:col-start-1'
               )}
             >
               <Footer />

@@ -31,10 +31,10 @@ export function Navbar() {
                   key={path}
                   href={path}
                   className={cn(
-                    'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1 font-medium ',
+                    'transition-all hover:text-zinc-800 dark:hover:text-zinc-200 flex align-middle relative py-1 px-2 m-1 font-medium ',
                     isActive
-                      ? 'text-neutral-800 dark:text-neutral-300'
-                      : 'text-neutral-600 dark:text-neutral-400'
+                      ? 'text-zinc-800 dark:text-zinc-300'
+                      : 'text-zinc-600 dark:text-zinc-400'
                   )}
                 >
                   {name}
