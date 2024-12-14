@@ -90,7 +90,7 @@ export default function RootLayout({
       <body className="h-min-[100dvh] antialiased md:h-[100dvh]">
         <main className="grid h-full min-h-[100dvh] w-full grid-rows-[auto_1fr] md:min-h-0 md:grid-rows-[1fr_4fr]">
           {/* Top section */}
-          <div className="grid h-full grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr]">
+          <div className="grid h-full grid-cols-[1fr_auto] md:grid-cols-[1fr_3fr] xl:grid-cols-[3fr_2fr]">
             <div className={cn(SECTION_PADDING, 'md:col-start-1')}>
               <AnimatedLogo size={40} />
             </div>
@@ -105,7 +105,7 @@ export default function RootLayout({
           </div>
 
           {/* bottom section */}
-          <div className="grid h-full min-h-0 grid-flow-dense grid-cols-1 grid-rows-[1fr_auto] md:grid-cols-[2fr_3fr] xl:grid-cols-[3fr_2fr]">
+          <div className="grid h-full min-h-0 grid-flow-dense grid-cols-1 grid-rows-[1fr_auto] md:grid-cols-[1fr_3fr] xl:grid-cols-[3fr_2fr]">
             <div
               className={cn(
                 SECTION_PADDING,
