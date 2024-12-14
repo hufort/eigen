@@ -13,7 +13,7 @@ import { cn } from './utils'
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#D6D3D1' }, // stone-300
-    { media: '(prefers-color-scheme: dark)', color: '#09090B' }, // zinc-950
+    { media: '(prefers-color-scheme: dark)', color: '#27272A' }, // zinc-800
   ],
 }
 
