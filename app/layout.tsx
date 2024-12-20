@@ -2,13 +2,10 @@ import './global.css'
 import type { Metadata, Viewport } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Navbar } from './components/nav'
-import { AnimatedLogo } from './components/animated-logo'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 import { cn } from './utils'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const viewport: Viewport = {
   themeColor: [
@@ -71,8 +68,6 @@ export const metadata: Metadata = {
   },
 }
 
-const SECTION_PADDING = 'p-8 sm:py-10 lg:p-12'
-
 export default function RootLayout({
   children,
 }: {
@@ -87,46 +82,10 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="h-min-[100dvh] antialiased md:h-[100dvh]">
-        <main className="grid h-full min-h-[100dvh] w-full grid-rows-[auto_1fr] md:min-h-0 md:grid-rows-[1fr_4fr]">
-          {/* Top section */}
-          <div className="grid h-full grid-cols-[1fr_auto] md:grid-cols-[1fr_3fr] xl:grid-cols-[3fr_2fr]">
-            <div className={cn(SECTION_PADDING, 'md:col-start-1')}>
-              <AnimatedLogo size={40} />
-            </div>
-            <div
-              className={cn(
-                SECTION_PADDING,
-                'border-dashed border-stone-300 md:col-start-2 md:border-l dark:border-zinc-300/10'
-              )}
-            >
-              <Navbar />
-            </div>
-          </div>
-
-          {/* bottom section */}
-          <div className="grid h-full min-h-0 grid-flow-dense grid-cols-1 grid-rows-[1fr_auto] md:grid-cols-[1fr_3fr] xl:grid-cols-[3fr_2fr]">
-            <div
-              className={cn(
-                SECTION_PADDING,
-                'flex-1 overflow-y-auto border-t border-dashed border-stone-300 md:col-start-2 md:border-l dark:border-zinc-300/10'
-              )}
-            >
-              <div className="max-w-2xl">{children}</div>
-            </div>
-            <div
-              className={cn(
-                SECTION_PADDING,
-                'flex items-end border-t border-dashed border-stone-300 md:col-start-1 dark:border-zinc-300/10'
-              )}
-            >
-              <Footer />
-            </div>
-          </div>
-
-          <Analytics />
-          <SpeedInsights />
-        </main>
+      <body className="antialiased">
+        <main>{children}</main>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
