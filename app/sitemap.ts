@@ -1,4 +1,4 @@
-import { getNotebookNotes } from 'app/notebook/utils'
+import { getNotebookNotes } from '@/(main)/notebook/utils'
 
 export const baseUrl = 'https://portfolio-blog-starter.vercel.app'
 

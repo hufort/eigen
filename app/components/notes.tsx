@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { formatDate, getNotebookNotes } from 'app/notebook/utils'
+import { formatDate, getNotebookNotes } from '@/(main)/notebook/utils'
 
 export function NotebookNotes() {
   let allNotes = getNotebookNotes()

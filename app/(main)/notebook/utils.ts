@@ -54,7 +54,7 @@ function getMDXData(dir: string) {
 }
 
 export function getNotebookNotes() {
-  return getMDXData(path.join(process.cwd(), 'app', 'notebook', 'notes'))
+  return getMDXData(path.join(process.cwd(), 'app', '(main)', 'notebook', 'notes'))
 }
 
 export function formatDate(date: string, includeRelative = false) {
