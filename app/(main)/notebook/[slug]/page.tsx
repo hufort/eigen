@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { formatDate, getNotebookNotes } from 'app/notebook/utils'
+import { formatDate, getNotebookNotes } from '@/(main)/notebook/utils'
 import { baseUrl } from 'app/sitemap'
 import { CustomMDX } from 'app/components/mdx'
 

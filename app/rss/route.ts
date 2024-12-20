@@ -1,5 +1,5 @@
 import { baseUrl } from 'app/sitemap'
-import { getNotebookNotes } from 'app/notebook/utils'
+import { getNotebookNotes } from '@/(main)/notebook/utils'
 
 export async function GET() {
   let allNotes = await getNotebookNotes()
