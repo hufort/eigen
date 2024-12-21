@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Download and install git-crypt
-curl -o /tmp/git-crypt.deb https://mirrors.edge.kernel.org/ubuntu/pool/universe/g/git-crypt/git-crypt_0.7.0-2_amd64.deb
-dpkg -x /tmp/git-crypt.deb /tmp/git-crypt
-export PATH="/tmp/git-crypt/usr/bin:$PATH"
+# Download pre-compiled git-crypt binary
+curl -L -o /tmp/git-crypt https://github.com/AGWA/git-crypt/releases/download/0.7.0/git-crypt-0.7.0-linux-x86_64
+chmod +x /tmp/git-crypt
+export PATH="/tmp:$PATH"
 
 # Decrypt files
 echo $GIT_CRYPT_KEY | base64 -d > /tmp/git-crypt-key
