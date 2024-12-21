@@ -2,11 +2,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm decrypt && pnpm touch-decrypted && next build",
+    "build": "pnpm decrypt && next build",
     "start": "next start",
     "encrypt": "tsx scripts/encrypt-content.mts",
     "decrypt": "tsx scripts/decrypt-content.mts",
-    "touch-decrypted": "tsx scripts/touch-decrypted.mts",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,mdx}\""
   },
   "dependencies": {
