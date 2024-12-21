@@ -4,8 +4,8 @@
     "dev": "next dev",
     "build": "pnpm decrypt && next build",
     "start": "next start",
-    "encrypt": "tsx scripts/encrypt-content.ts",
-    "decrypt": "tsx scripts/decrypt-content.ts",
+    "encrypt": "tsx scripts/encrypt-content.mts",
+    "decrypt": "tsx scripts/decrypt-content.mts",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,mdx}\""
   },
   "dependencies": {
@@ -34,6 +34,5 @@
     "dotenv": "^16.4.7",
     "prettier": "^3.4.2",
     "tsx": "^4.19.2"
-  },
-  "type": "module"
+  }
 }
