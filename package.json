@@ -2,11 +2,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm decrypt && next build",
     "start": "next start",
+    "encrypt": "tsx scripts/encrypt-content.mts",
+    "decrypt": "tsx scripts/decrypt-content.mts",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md,mdx}\""
   },
   "dependencies": {
+    "@radix-ui/react-separator": "^1.1.1",
     "@tailwindcss/postcss": "4.0.0-alpha.13",
     "@types/node": "20.11.17",
     "@types/react": "18.2.55",
@@ -28,6 +31,8 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
-    "prettier": "^3.4.2"
+    "dotenv": "^16.4.7",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2"
   }
 }
