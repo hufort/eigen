@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm decrypt && next build",
+    "build": "pnpm decrypt && TAILWIND_MODE=build next build",
     "start": "next start",
     "encrypt": "tsx scripts/encrypt-content.mts",
     "decrypt": "tsx scripts/decrypt-content.mts",
