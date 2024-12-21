@@ -1,8 +1,8 @@
-import { encrypt } from '../lib/crypto.js'
-import fs from 'fs'
-import path from 'path'
+import { encrypt } from '../lib/crypto.mts'
+import fs from 'node:fs'
+import path from 'node:path'
 import dotenv from 'dotenv'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 
 // Load .env.local file
 dotenv.config({ path: '.env.local' })
